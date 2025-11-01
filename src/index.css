@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 180 100% 90%;
+
+    --card: 220 18% 8%;
+    --card-foreground: 180 100% 90%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 180 100% 90%;
+
+    --primary: 189 100% 50%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 180 100% 90%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 180 20% 65%;
+
+    --accent: 25 100% 60%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 180 100% 90%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 189 100% 50%;
+
+    --radius: 0.25rem;
+
+    --glow-primary: 189 100% 50%;
+    --glow-accent: 25 100% 60%;
+    
+    --chart-gradient-start: 189 100% 50%;
+    --chart-gradient-end: 189 100% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--glow-accent) / 0.5);
+  }
+
+  .text-glow-primary {
+    text-shadow: 0 0 10px hsl(var(--glow-primary) / 0.8);
+  }
+
+  .text-glow-accent {
+    text-shadow: 0 0 10px hsl(var(--glow-accent) / 0.8);
+  }
+}
